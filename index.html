@@ -14,5 +14,20 @@
       <label>Mật khẩu</label> <input type="password" id="txtpassword" />
     </div>
     <button id="btnLogin">Đăng nhập</button>
+    <script>
+      document
+        .getElementById("btnLogin")
+        .addEventListener("click", function () {
+          var user = document.getElementById("txtUserName").value;
+          var pass = document.getElementById("txtpassword").value;
+
+          if (user === "admin" && pass === "admin") {
+            alert("Đăng nhập thành công!");
+            // Chuyển trang nếu cần: window.location.href = "home.html";
+          } else {
+            alert("Sai tài khoản hoặc mật khẩu");
+          }
+        });
+    </script>
   </body>
 </html>
